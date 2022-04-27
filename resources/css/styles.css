@@ -1,0 +1,432 @@
+body {
+background-color: #000000;
+margin: 0;
+}
+
+@font-face {
+    font-family: "SpaceMono-Regular";
+    src: url("../SpaceMono-Regular.ttf");
+}
+
+body, p, a, h1, h2, h3, input { 
+  font-family: "SpaceMono-Regular";
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+
+.downloadtext {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+@-webkit-keyframes rotateDiscoBall {
+    0% {-webkit-transform: rotateX(90deg) rotateZ(0deg) rotate(0deg); }
+    100% {-webkit-transform: rotateX(90deg) rotateZ(360deg) rotate(0deg); }
+}
+
+@keyframes rotateDiscoBall {
+    0% {transform: rotateX(90deg) rotateZ(0deg) rotate(0deg); }
+    100% {transform: rotateX(90deg) rotateZ(360deg) rotate(0deg); }
+}
+
+@-webkit-keyframes rotateDiscoBallMiddle {
+    0% {-webkit-transform: rotateX(90deg) rotateY(0deg) rotate(0deg); }
+    100% {-webkit-transform: rotateX(90deg) rotateY(-360deg) rotate(0deg); }
+}
+
+@keyframes rotateDiscoBallMiddle {
+    0% {transform: rotateX(90deg) rotateY(0deg) rotate(0deg); }
+    100% {transform: rotateX(90deg) rotateY(-360deg) rotate(0deg); }
+}
+
+@-webkit-keyframes reflect {
+    0% {-webkit-filter: brightness(60%);}
+    50% {-webkit-filter: brightness(120%);}
+    100% {-webkit-filter: brightness(90%);}
+}
+
+@keyframes reflect {
+    0% {opacity: 1;}
+    50% {opacity: 0.4;}
+    100% {opacity: 1;}
+}
+
+#discoBall {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 1%;
+  left: 10%;
+  margin-left: -50px;
+  -webkit-animation: rotateDiscoBall 18s linear infinite;
+  animation: rotateDiscoBall 18s linear infinite;
+  margin-top: -1em;
+}
+
+#discoBallLight {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 1%;
+  left: 10%;
+  margin-left: -50px; 
+  border-radius: 100%;
+  background-color: white; 
+  opacity: 0.2;
+  -webkit-filter: blur(20px);
+  margin-top: -1em;
+}
+
+.square {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;	
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  transform: rotateX(90deg) rotateY(0deg) translateZ(0px);
+}
+
+#discoBallMiddle { 
+  height: 100%;
+  border-radius: 100%;
+  background-color: #443123;
+  position: absolute;
+  background: -webkit-linear-gradient(top, #111, #333);
+  background: -moz-linear-gradient(top, #111, #333);
+  background: linear-gradient(top, #111, #333);
+  -webkit-animation: rotateDiscoBallMiddle 18s linear infinite;
+  animation: rotateDiscoBallMiddle 18s linear infinite;
+}
+
+
+header {
+margin-top:10%;
+}
+
+/*
+ main
+ */
+
+p {
+  color: #ffffff;
+}
+
+.date {
+  position: absolute;
+  top: 1%;
+  right:10%;
+}
+
+.weather {
+  position: absolute;
+  top: 3.5%;
+  right:10%;
+}
+
+
+
+.input_center {
+	text-align: center;
+	width: 50%;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder {
+  text-align: center;
+}
+
+h1, h2, h3, p {
+	color:#ffffff
+}
+
+.form_center_text {
+	text-align: center;
+}
+
+.icon_tray {
+	position: fixed;
+	margin:auto;
+	width: 50%;
+	text-align:center;
+	left: 0;
+	right: 0;
+	bottom: 0.5em;
+}
+
+/* Jukebox */
+
+.main_song {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2em;
+        border-radius: 50%;
+        animation: rotation 4s infinite linear;
+}
+
+.music_player {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+
+}
+
+@keyframes rotation {
+        from {
+                transform: rotate(0deg);
+        }
+        to {
+                transform: rotate(359deg);
+        }
+}
+
+.button {
+  text-decoration: none;
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2em;
+}
+
+.button:hover, .downloadtext:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.button_song {
+  text-decoration: none;
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}
+
+.button_song:hover {
+background-color: #ffffff;
+animation: rotation 10s infinite linear;
+
+ 
+}
+
+.grid_song-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: none;
+  justify-items: center;
+
+}
+
+.grid_song-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-items: center;
+
+}
+
+
+/* PDF/Images */
+
+.pdfbutton {
+  text-decoration: none;
+  background-color: #000000;
+  border: solid;
+  color: white;
+  display: inline;
+  width: 200px;
+  height: 300px;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+}
+
+.pdfbutton:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: solid;
+  border-color:#ffffff;
+}
+
+
+
+.button_delete {
+  text-decoration: none;
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 100px;
+  height: 10%;
+}
+
+.button_delete:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.button_delete2 {
+  text-decoration: none;
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.button_delete2:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.button_delete {
+  text-decoration: none;
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 100px;
+  height: 10%;
+}
+
+.button_delete:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: none;
+  padding: 10px;
+  justify-items: center;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  font-size: 30px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+@media only screen and (max-width: 792px) {
+.grid_song-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: none;
+  justify-items: center;
+
+}
+
+.grid_song-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-items: center;
+
+}
+
+
+.icon_tray {
+	position: fixed;
+	margin:auto;
+	width: 100%;
+	text-align:center;
+	left: 0;
+	right: 0;
+  background-color: #000000;
+  padding-top:2px;
+  bottom: 0;
+}
+
+.pdfbutton {
+  text-decoration: none;
+  background-color: #000000;
+  border: none;
+  color: white;
+  display: inline;
+  width: 165px;
+  height: 247.5px;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+}
+
+.pdfbutton:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.button {
+  -webkit-appearance: none;
+  text-decoration: none;
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2em;
+}
+
+.button:hover {
+  -webkit-appearance: none;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.main_song {
+  margin-top:12%;
+}
+
+}
